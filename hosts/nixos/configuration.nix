@@ -146,4 +146,13 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+
+ #------------------------------------------------------------#
+ #                         Custom                             #
+ #------------------------------------------------------------#
+
+
+ # Prevent the System form Suspending when the Lid is Closed and the system is connected to external power
+ services.logind.lidSwitchExternalPower = "ignore";
+
 }
