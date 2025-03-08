@@ -2,14 +2,19 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -85,21 +90,22 @@
   users.users.ulianj = {
     isNormalUser = true;
     description = "ulianJ";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
-
   home-manager = {
     # also pass inputs to home-manager modules
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "ulianj" = import ./home.nix;
     };
   };
-
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -117,7 +123,10 @@
     nixfmt-rfc-style
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -146,28 +155,25 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  #------------------------------------------------------------#
+  #                         Custom                             #
+  #------------------------------------------------------------#
 
- #------------------------------------------------------------#
- #                         Custom                             #
- #------------------------------------------------------------#
+  # Prevent the System form Suspending when the Lid is Closed and the system is connected to external power
+  services.logind.lidSwitchExternalPower = "ignore";
 
+  # RDP
 
- # Prevent the System form Suspending when the Lid is Closed and the system is connected to external power
- services.logind.lidSwitchExternalPower = "ignore";
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
+  services.xrdp.openFirewall = true;
 
+  # Disable the Gnome3/GDM auto-suspend feature that cannot be disabled in GUI!
+  # If no user is logged in, the machine will power down after 20 minutes
 
- # RDP
-
- services.xrdp.enable = true;
- services.xrdp.defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
- services.xrdp.openFirewall = true;
-
- # Disable the Gnome3/GDM auto-suspend feature that cannot be disabled in GUI!
- # If no user is logged in, the machine will power down after 20 minutes
-
- systemd.targets.sleep.enable = false;
- systemd.targets.suspend.enable = false;
- systemd.targets.hibernate.enable = false;
- systemd.targets.hybrid-sleep.enable =  false;
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
 
 }
