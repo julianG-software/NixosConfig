@@ -12,7 +12,7 @@
     zsh.enable = lib.mkEnableOption "enables zsh shell";
   };
 
-  config = lib.mkId config.zsh.enable {
+  config = lib.mkIf config.zsh.enable {
     # Option definitions.
     # Define what other settings, services and resources should be active.
     # Usually these depend on whether a user of this module chose to "enable" it
