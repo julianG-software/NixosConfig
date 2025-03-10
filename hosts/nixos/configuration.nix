@@ -14,6 +14,9 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
+
+    # Import my Shell Module
+    ../../modules/programs/shells.nix
   ];
 
   # Bootloader.
@@ -86,6 +89,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  zsh.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ulianj = {
     isNormalUser = true;
@@ -94,6 +99,7 @@
       "networkmanager"
       "wheel"
     ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       #  thunderbird
     ];
