@@ -2,6 +2,7 @@
   imports = [
     # Paths to other modules.
     # Compose this module out of smaller ones.
+    ../../../environment/aliases/commonAliases.nix
   ];
 
   options = {
@@ -21,5 +22,6 @@
     
     # enable the shell system wide
     programs.zsh.enable = true;
+    commonAliases.enable = true;
   };
 }
