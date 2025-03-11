@@ -93,4 +93,18 @@
   	};
   	history.size = 10000;
   };
+
+
+  # Git
+  programs.git = {
+  	enable = true;
+  	userName  = "Julian Gerke";
+  	userEmail = "julian.gerke99@gmail.com";
+  	aliases = {
+		undo = "reset HEAD~";
+	};
+	lfs.enable = true;
+
+  };
+
 }
