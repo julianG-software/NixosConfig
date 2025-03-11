@@ -73,4 +73,24 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+
+  #------------------------------------------------------------#
+  #                         Custom                             #
+  #------------------------------------------------------------#
+
+  # ZSH
+  programs.zsh = {
+  	enable = true;
+  	enableCompletion = true;
+	enableAutosuggestions = true;
+  	#autosuggestions.enable = true;
+  	syntaxHighlighting.enable = true;
+
+  	shellAliases = {
+    		ll = "ls -l";
+    		update = "sudo nixos-rebuild switch --flake ~/.config/nixos/#nixos";
+  	};
+  	history.size = 10000;
+  };
 }

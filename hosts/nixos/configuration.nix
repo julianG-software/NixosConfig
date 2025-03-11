@@ -203,4 +203,9 @@
     };
   };
 
+  #ZSH
+
+  # Needed for Completion
+  environment.pathsToLink = [ "/share/zsh" ];
+
 }
