@@ -1,6 +1,28 @@
-{ config, pkgs, ... }:
+{ 
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
+
+  # You can import other home-manager modules here
+  imports = [
+    # If you want to use modules your own flake exports (from modules/home-manager):
+    # outputs.homeManagerModules.example
+
+    # Or modules exported from other flakes (such as nix-colors):
+    # inputs.nix-colors.homeManagerModules.default
+
+    # You can also split up your configuration and import pieces of it here:
+
+    # Import ZSH config
+    ../../homemanagerModules/programs/zsh.nix
+  ];
+	
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "ulianj";
@@ -75,18 +97,10 @@
   programs.home-manager.enable = true;
 
   #------------------------------------------------------------#
-  #                         Custom                             #
+  #                       Custom Modules                       #
   #------------------------------------------------------------#
 
-  # ZSH
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    #enableAutosuggestions = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    history.size = 10000;
-  };
+  zsh.enable = true;
 
   # Git
   programs.git = {
