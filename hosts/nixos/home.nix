@@ -20,6 +20,7 @@
 
     # Import ZSH config
     ../../homemanagerModules/programs/zsh.nix
+    ../../homemanagerModules/programs/git.nix
   ];
 	
 
@@ -100,18 +101,14 @@
   #                       Custom Modules                       #
   #------------------------------------------------------------#
 
+  # ZSH
+  #Import Path ../../homemanagerModules/programs/zsh.nix
   zsh.enable = true;
 
   # Git
-  programs.git = {
-    enable = true;
-    userName = "Julian Gerke";
-    userEmail = "julian.gerke99@gmail.com";
-    aliases = {
-      undo = "reset HEAD~";
-    };
-    lfs.enable = true;
-
-  };
+  #Import Path ../../homemanagerModules/programs/git.nix
+  git.enable = true;
+  git.userName = "Julian Gerke";
+  git.userEmail = "julian.gerke99@gmail.com";
 
 }
