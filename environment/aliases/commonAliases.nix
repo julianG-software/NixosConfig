@@ -26,7 +26,7 @@
       ll = "ls -l";
 
       # CD Locations
-      nixConf = "cd ~/.conf/nixos/";
+      nixConf = "cd ~/.config/nixos/";
 
       # Nixos
       rebuild = "sudo nixos-rebuild switch --flake ./";
