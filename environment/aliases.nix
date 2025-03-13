@@ -1,4 +1,5 @@
-{ ... }:{
+{ ... }:
+{
   imports = [
     ./aliases/commonAliases.nix
   ];

@@ -74,36 +74,34 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-
   #------------------------------------------------------------#
   #                         Custom                             #
   #------------------------------------------------------------#
 
   # ZSH
   programs.zsh = {
-  	enable = true;
-  	enableCompletion = true;
-	#enableAutosuggestions = true;
-  	autosuggestion.enable = true;
-  	syntaxHighlighting.enable = true;
+    enable = true;
+    enableCompletion = true;
+    #enableAutosuggestions = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
-  	shellAliases = {
-    		ll = "ls -l";
-    		update = "sudo nixos-rebuild switch --flake ~/.config/nixos/#nixos";
-  	};
-  	history.size = 10000;
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch --flake ~/.config/nixos/#nixos";
+    };
+    history.size = 10000;
   };
-
 
   # Git
   programs.git = {
-  	enable = true;
-  	userName  = "Julian Gerke";
-  	userEmail = "julian.gerke99@gmail.com";
-  	aliases = {
-		undo = "reset HEAD~";
-	};
-	lfs.enable = true;
+    enable = true;
+    userName = "Julian Gerke";
+    userEmail = "julian.gerke99@gmail.com";
+    aliases = {
+      undo = "reset HEAD~";
+    };
+    lfs.enable = true;
 
   };
 

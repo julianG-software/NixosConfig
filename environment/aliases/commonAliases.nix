@@ -1,4 +1,11 @@
-{ pkgs, lib , config,environment, ... }:{
+{
+  pkgs,
+  lib,
+  config,
+  environment,
+  ...
+}:
+{
   imports = [
     # Paths to other modules.
     # Compose this module out of smaller ones.
@@ -13,17 +20,17 @@
   };
 
   config = lib.mkIf config.commonAliases.enable {
-	environment.shellAliases = {
-		# LS
-		la = "ls -al";
-		ll = "ls -l";
+    environment.shellAliases = {
+      # LS
+      la = "ls -al";
+      ll = "ls -l";
 
-		# CD Locations
-		nixConf = "cd ~/.conf/nixos/";
+      # CD Locations
+      nixConf = "cd ~/.conf/nixos/";
 
-		# Nixos
-		rebuild = "sudo nixos-rebuild switch --flake ./";
-		rebuild-test = "sudo nixos-rebuild test --flake ./";
-	};			
+      # Nixos
+      rebuild = "sudo nixos-rebuild switch --flake ./";
+      rebuild-test = "sudo nixos-rebuild test --flake ./";
+    };
   };
 }
