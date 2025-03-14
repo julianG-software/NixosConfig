@@ -28,5 +28,11 @@
       syntaxHighlighting.enable = true;
       history.size = 10000;
     };
+
+    programs.oh-my-posh = {
+        enable = true;
+	enableZshIntegration = true;
+        useTheme = "catppuccin_frappe";	
+    };
   };
 }
