@@ -38,6 +38,9 @@
       history.size = 10000;
 
       # Plugins
+      # Example of a oh-my-zsh plugin
+      # {name = "plugins/copyfile";tags = [ "from:oh-my-zsh" ];}
+
       zplug = {
         enable = true;
         plugins = [
@@ -45,6 +48,7 @@
             name = "zsh-users/zsh-syntax-highlighting";
             tags = [ "defer:2" ];
           }
+
         ];
       };
 
