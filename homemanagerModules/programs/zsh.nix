@@ -25,6 +25,7 @@
     # Install ZSH Related Packages
     home.packages = with pkgs; [
       oh-my-posh
+      zplug
     ];
 
     programs.zsh = {
@@ -34,6 +35,13 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       history.size = 10000;
+
+      # Plugins
+      zplug = {
+        enable = true;
+        plugins = [ ];
+      };
+
     };
 
     programs.oh-my-posh = {
