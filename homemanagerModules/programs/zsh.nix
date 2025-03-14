@@ -26,6 +26,7 @@
     home.packages = with pkgs; [
       oh-my-posh
       zplug
+      zsh-syntax-highlighting
     ];
 
     programs.zsh = {
@@ -39,7 +40,12 @@
       # Plugins
       zplug = {
         enable = true;
-        plugins = [ ];
+        plugins = [
+          {
+            name = "zsh-users/zsh-syntax-highlighting";
+            tags = [ "defer:2" ];
+          }
+        ];
       };
 
     };
