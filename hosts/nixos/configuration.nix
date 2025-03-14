@@ -134,6 +134,7 @@
     git
     gh
     nixfmt-rfc-style
+    oh-my-posh
   ];
 
   nix.settings.experimental-features = [
