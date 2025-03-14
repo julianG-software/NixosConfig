@@ -133,8 +133,7 @@
     wget
     git
     gh
-    nixfmt-rfc-style
-    oh-my-posh
+    nixfmt-rfc-style 
   ];
 
   nix.settings.experimental-features = [
