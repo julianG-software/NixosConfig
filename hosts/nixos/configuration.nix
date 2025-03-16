@@ -17,6 +17,7 @@
 
     # Import my Shell Module
     ../../modules/programs/shells.nix
+    ../../modules/services/RDP.nix
   ];
 
   # Bootloader.
@@ -133,7 +134,7 @@
     wget
     git
     gh
-    nixfmt-rfc-style 
+    nixfmt-rfc-style
   ];
 
   nix.settings.experimental-features = [
@@ -177,9 +178,7 @@
 
   # RDP
 
-  services.xrdp.enable = true;
-  services.xrdp.defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
-  services.xrdp.openFirewall = true;
+  RDP.enable = true;
 
   # Disable the Gnome3/GDM auto-suspend feature that cannot be disabled in GUI!
   # If no user is logged in, the machine will power down after 20 minutes
