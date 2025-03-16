@@ -48,6 +48,10 @@
             name = "zsh-users/zsh-syntax-highlighting";
             tags = [ "defer:2" ];
           }
+          {
+            name = "plugins/sudo";
+            tags = [ "from:oh-my-zsh" ];
+          }
 
         ];
       };
