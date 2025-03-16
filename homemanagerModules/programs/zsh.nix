@@ -52,7 +52,10 @@
             name = "plugins/sudo";
             tags = [ "from:oh-my-zsh" ];
           }
-
+          {
+            name = "plugins/extract";
+            tags = [ "from:oh-my-zsh" ];
+          }
         ];
       };
 
