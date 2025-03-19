@@ -18,7 +18,7 @@
     # Import my Shell Module
     ../../modules/programs/shells.nix
     ../../modules/services/RDP.nix
-    ../../modules/services/ssh.nix
+    ../../modules/services/ssh/ssh.nix
     ../../modules/services/GDM_auto-suspend.nix
   ];
 
