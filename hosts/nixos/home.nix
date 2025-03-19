@@ -1,4 +1,4 @@
-{ 
+{
   inputs,
   lib,
   config,
@@ -21,8 +21,10 @@
     # Import ZSH config
     ../../homemanagerModules/programs/zsh.nix
     ../../homemanagerModules/programs/git.nix
+
+    # Import Custom Shell scripts
+    ../../homemanagerModules/custom-scripts/custom-scripts.nix
   ];
-	
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

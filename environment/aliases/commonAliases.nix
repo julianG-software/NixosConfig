@@ -29,8 +29,10 @@
       nixconf = "cd ~/.config/nixos/";
 
       # Nixos
-      rebuild = "sudo nixos-rebuild switch --flake ./";
-      rebuild-test = "sudo nixos-rebuild test --flake ./";
+
+      # replaced by shell script
+      #rebuild = "sudo nixos-rebuild switch --flake ./";
+      #rebuild-test = "sudo nixos-rebuild test --flake ./";
     };
   };
 }
