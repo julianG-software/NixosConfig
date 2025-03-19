@@ -3,6 +3,7 @@
   lib,
   config,
   programs,
+  environment,
   ...
 }:
 {
@@ -18,5 +19,8 @@
     # enable the shell system wide
     programs.zsh.enable = true;
     commonAliases.enable = true;
+
+    # Needed for Completion
+    environment.pathsToLink = [ "/share/zsh" ];
   };
 }

@@ -193,6 +193,6 @@
   #ZSH
 
   # Needed for Completion
-  environment.pathsToLink = [ "/share/zsh" ];
+  # environment.pathsToLink = [ "/share/zsh" ];
 
 }
