@@ -108,13 +108,6 @@
     ];
   };
 
-  # Setup Allowed SSH Keys for User
-  # note: ssh-copy-id will add user@your-machine after the public key
-  # but we can remove the "@your-machine" part
-  users.users.ulianj.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEgFYF8ny+v6cRWu+LeCYSGq4HkDOLpwvHUx7bALxzTH ulianj" # Gamboot "Work" Pc
-  ];
-
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
