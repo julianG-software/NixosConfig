@@ -195,6 +195,15 @@
     settings = {
       vim = {
         statusline.lualine.enable = true;
+
+        languages = {
+          nix = {
+            enable = true;
+            lsp.enable = true;
+            # can prob uninstall nixfmt by using format.package
+            format.type = "nixfmt";
+          };
+        };
       };
     };
   };
