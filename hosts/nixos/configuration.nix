@@ -6,6 +6,7 @@
   config,
   pkgs,
   inputs,
+  programs,
   ...
 }:
 
@@ -187,5 +188,11 @@
 
   # Needed for Completion
   # environment.pathsToLink = [ "/share/zsh" ];
+
+  # NVF
+  programs.nvf = {
+    enable = true;
+    settings = {};
+  };
 
 }
