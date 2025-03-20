@@ -192,7 +192,11 @@
   # NVF
   programs.nvf = {
     enable = true;
-    settings = {};
+    settings = {
+      vim = {
+        statusline.lualine.enable = true;
+      };
+    };
   };
 
 }
