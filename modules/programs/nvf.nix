@@ -119,7 +119,7 @@
             nvimBufferline.enable = false; # adds file tabs like in gui editors
           };
 
-          treesitter.context.enable = true;
+          treesitter.context.enable = false;
 
           # Learn Vim
           binds = {
