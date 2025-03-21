@@ -18,6 +18,7 @@
 
     # Import my Shell Module
     ../../modules/programs/shells.nix
+    ../../modules/programs/nvf.nix
     ../../modules/services/RDP.nix
     ../../modules/services/ssh/ssh.nix
     ../../modules/services/GDM_auto-suspend.nix
@@ -190,22 +191,6 @@
   # environment.pathsToLink = [ "/share/zsh" ];
 
   # NVF
-  programs.nvf = {
-    enable = true;
-    settings = {
-      vim = {
-        statusline.lualine.enable = true;
-
-        languages = {
-          nix = {
-            enable = true;
-            lsp.enable = true;
-            # can prob uninstall nixfmt by using format.package
-            format.type = "nixfmt";
-          };
-        };
-      };
-    };
-  };
+  nvf.enable = true;
 
 }
