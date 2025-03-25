@@ -18,7 +18,7 @@
 
     # Import my Shell Module
     ../../modules/programs/shells.nix
-    ../../modules/programs/nvf.nix
+    #../../modules/programs/nvf.nix
     ../../modules/services/RDP.nix
     ../../modules/services/ssh/ssh.nix
     ../../modules/services/GDM_auto-suspend.nix
@@ -191,6 +191,7 @@
   # environment.pathsToLink = [ "/share/zsh" ];
 
   # NVF
-  nvf.enable = true;
+  # Disabld for testing NixCats
+  #nvf.enable = true;
 
 }

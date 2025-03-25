@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
-    nvf.url = "github:notashelf/nvf";
+    # nvf.url = "github:notashelf/nvf";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -16,7 +16,7 @@
     {
       self,
       nixpkgs,
-      nvf,
+      #nvf,
       ...
     }@inputs:
     {
@@ -27,7 +27,7 @@
         modules = [
           ./hosts/nixos/configuration.nix
           inputs.home-manager.nixosModules.default
-          nvf.nixosModules.default
+          #nvf.nixosModules.default
         ];
       };
     };
