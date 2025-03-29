@@ -132,6 +132,7 @@
     git
     gh
     nixfmt-rfc-style
+    inputs.nixCats.packages.${system}.nixCats
   ];
 
   nix.settings.experimental-features = [

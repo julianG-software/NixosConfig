@@ -10,12 +10,19 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixCats = {
+        url = "github:julianG-software/neovim-config";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
     {
       self,
       nixpkgs,
+      nixCats,
       #nvf,
       ...
     }@inputs:

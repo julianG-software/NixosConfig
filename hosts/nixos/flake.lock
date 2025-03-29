@@ -21,6 +21,42 @@
         "type": "github"
       }
     },
+    "nixCats": {
+      "inputs": {
+        "nixCats": "nixCats_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1743270888,
+        "narHash": "sha256-0tAGtSmHWuh3BqPsRSsgDa02GoCDCC6TwTeF8d0jaT4=",
+        "owner": "julianG-software",
+        "repo": "neovim-config",
+        "rev": "9a2413c69bbff0919cb264111467cf66af4b090a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "julianG-software",
+        "repo": "neovim-config",
+        "type": "github"
+      }
+    },
+    "nixCats_2": {
+      "locked": {
+        "lastModified": 1743257673,
+        "narHash": "sha256-5upHHCh4n6CRRzRi132DjZo1uRltohjnYli2ITKben4=",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "rev": "44bb608e57f407b8abab30f9512f5859df3be245",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1740932899,
@@ -40,6 +76,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nixCats": "nixCats",
         "nixpkgs": "nixpkgs"
       }
     }
