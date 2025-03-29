@@ -5,13 +5,13 @@ ARGUMENT="${1:-nixos}"
 
 
 case "$ARGUMENT" in
-        "nixos") echo 1
-            sudo nixos-rebuild switch --flake ~/.config/nixos/hosts/nixos/#nixos
+        "nixos")
+                sudo nixos-rebuild switch --flake ~/.config/nixos/hosts/nixos/#nixos
             exit 0
         ;;
         *) echo default
-                echo "please specify host"
-                exit 2
+            echo "please specify host"
+            exit 2
         ;;
 esac
 
