@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  programs,
   ...
 }:
 {
@@ -23,7 +24,8 @@
 
   config = lib.mkIf config.software_aliases.enable {
 
-    environment.shellAliases =
+    #environment.shellAliases
+    programs.zsh.shellAliases =
       {
         # General software aliases
       }

@@ -22,6 +22,7 @@
     ../../modules/services/RDP.nix
     ../../modules/services/ssh/ssh.nix
     ../../modules/services/GDM_auto-suspend.nix
+    ../../environment/aliases.nix
   ];
 
   # Bootloader.
@@ -186,10 +187,14 @@
   ssh.ForwardXServer = false;
   ssh.AllowRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
 
-  #ZSH
+  # aliases
+  commonAliases.enable = true;
+  software_aliases.enable = true;
 
-  # Needed for Completion
-  # environment.pathsToLink = [ "/share/zsh" ];
+  software_aliases = { 
+    # Enable nixcats aliases
+    vim.nixCats.enable = true; 
+  };
 
   # NVF
   # Disabld for testing NixCats

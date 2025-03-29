@@ -7,8 +7,7 @@
   ...
 }:
 {
-  imports = [
-    ../../../environment/aliases/commonAliases.nix
+  imports = [ 
   ];
 
   options = {
@@ -18,7 +17,6 @@
   config = lib.mkIf config.zsh.enable {
     # enable the shell system wide
     programs.zsh.enable = true;
-    commonAliases.enable = true;
 
     # Needed for Completion
     environment.pathsToLink = [ "/share/zsh" ];
