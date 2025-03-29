@@ -21,5 +21,7 @@
     systemd.targets.hibernate.enable = false;
     systemd.targets.hybrid-sleep.enable = false;
 
+    services.xserver.displayManager.gdm.autoSuspend = false;
+
   };
 }
