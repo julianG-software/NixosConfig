@@ -13,7 +13,7 @@
 
     nixCats = {
         url = "github:julianG-software/neovim-config";
-        inputs.nixpkgs.follows = "nixpkgs";
+        #inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
