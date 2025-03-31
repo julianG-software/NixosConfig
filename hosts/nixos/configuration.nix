@@ -23,6 +23,7 @@
     ../../modules/services/ssh/ssh.nix
     ../../modules/services/GDM_auto-suspend.nix
     ../../environment/aliases.nix
+    ../../modules/services/sunshine.nix
   ];
 
   # Bootloader.
@@ -191,10 +192,12 @@
   commonAliases.enable = true;
   software_aliases.enable = true;
 
-  software_aliases = { 
+  software_aliases = {
     # Enable nixcats aliases
-    vim.nixCats.enable = true; 
+    vim.nixCats.enable = true;
   };
+
+  sunshine.enable = true;
 
   # NVF
   # Disabld for testing NixCats
