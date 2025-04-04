@@ -111,6 +111,6 @@
   #Import Path ../../homemanagerModules/programs/git.nix
   git.enable = true;
   git.userName = "Julian Gerke";
-  git.userEmail = "julian.gerke99@gmail.com";
+  git.userEmail = "49532943+julianG-software@users.noreply.github.com";
 
 }
