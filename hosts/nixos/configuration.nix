@@ -152,11 +152,28 @@
 
   # List services that you want to enable:
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  # Firewall settings.
+  networking.firewall = {
+    allowedTCPPortRanges = [
+      # Common Dev server ports
+      {
+        from = 3000;
+        to = 4000;
+      }
+    ];
+    # Common Tool Ports
+    allowedTCPPorts = [
+      8080
+      5000
+      4200
+      9229
+      5432
+      3306
+      5000
+      2375
+      9000
+    ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
