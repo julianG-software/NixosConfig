@@ -14,7 +14,8 @@
 
   config = lib.mkIf config.commonVariables.enable {
     environment.variables = {
-      EDITOR = "vim";
+      # EDITOR = "vim";
+      EDITOR = "nixCats";
     };
   };
 }
