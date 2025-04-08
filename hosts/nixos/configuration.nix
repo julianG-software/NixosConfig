@@ -23,6 +23,7 @@
     ../../modules/services/ssh/ssh.nix
     ../../modules/services/GDM_auto-suspend.nix
     ../../environment/aliases.nix
+    ../../environment/variables.nix
     ../../modules/services/sunshine.nix
   ];
 
@@ -193,6 +194,7 @@
   # RDP
 
   RDP.enable = true;
+  sunshine.enable = true;
 
   # Disable the Gnome3/GDM auto-suspend feature that cannot be disabled in GUI!
   # If no user is logged in, the machine will power down after 20 minutes
@@ -214,7 +216,9 @@
     vim.nixCats.enable = true;
   };
 
-  sunshine.enable = true;
+  # ENV variables
+  commonVariables.enable = true;
+
 
   # NVF
   # Disabld for testing NixCats

@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./variables/commonVariables.nix
+  ];
+}
