@@ -194,7 +194,7 @@
   # RDP
 
   RDP.enable = true;
-  sunshine.enable = true;
+  sunshine.enable = false;
 
   # Disable the Gnome3/GDM auto-suspend feature that cannot be disabled in GUI!
   # If no user is logged in, the machine will power down after 20 minutes
