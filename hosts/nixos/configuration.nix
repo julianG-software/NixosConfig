@@ -134,6 +134,7 @@
     wget
     git
     gh
+    arandr
     nixfmt-rfc-style
     inputs.nixCats.packages.${system}.nixCats
   ];
