@@ -136,6 +136,7 @@
     git
     gh
     arandr
+    mpv
     nixfmt-rfc-style
     inputs.nixCats.packages.${system}.nixCats
   ];
