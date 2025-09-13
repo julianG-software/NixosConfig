@@ -21,7 +21,8 @@
     # Import ZSH config
     ../../homemanagerModules/programs/zsh.nix
     ../../homemanagerModules/programs/git.nix
-
+    ../../homemanagerModules/programs/mpv.nix
+    
     # Import Custom Shell scripts
     ../../homemanagerModules/custom-scripts/custom-scripts.nix
   ];
@@ -112,5 +113,7 @@
   git.enable = true;
   git.userName = "Julian Gerke";
   git.userEmail = "49532943+julianG-software@users.noreply.github.com";
-
+  
+  # MPV
+  mpv.enable = true;
 }
