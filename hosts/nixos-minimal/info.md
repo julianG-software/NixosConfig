@@ -1,6 +1,6 @@
 # nixos
 
-This is the config for my default nixos host and is intended as a generall purpose daily driver.
+This is the config for a minimal tty only enviroment
 
 ## Hardware
 this hardware is mainly run on my Asus Zenbook.
