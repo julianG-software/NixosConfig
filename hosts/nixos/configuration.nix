@@ -139,6 +139,8 @@
     mpv
     nixfmt-rfc-style
     inputs.nixCats.packages.${system}.nixCats
+    hwinfo
+    dmidecode
   ];
 
   nix.settings.experimental-features = [
