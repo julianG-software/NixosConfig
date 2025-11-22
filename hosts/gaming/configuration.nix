@@ -252,4 +252,10 @@
     enable = true;
     enable32Bit = true;
   };
+
+  # GPU Drivers
+  services.xserver.videoDrivers = ["nvidia"]; #worls for x and wayland
+  #services.xserver.videoDrivers = ["amdgpu"];
+
+  hardware.nvidia.modesetting.enable = true; # helps some wayland compositors work porperly
 }
