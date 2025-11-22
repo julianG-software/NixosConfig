@@ -243,4 +243,13 @@
   # Disabld for testing NixCats
   #nvf.enable = true;
 
+  #------------------------------------------------------------#
+  #                         Gaming                             #
+  #------------------------------------------------------------#
+
+  #enable opengl
+  hardware.gaphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 }
