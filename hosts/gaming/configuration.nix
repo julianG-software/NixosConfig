@@ -248,7 +248,7 @@
   #------------------------------------------------------------#
 
   #enable opengl
-  hardware.gaphics = {
+  hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
