@@ -36,8 +36,8 @@
     device = "/dev/disk/by-uuid/c1c8c743-4e6f-41d5-9116-dc8dae93fb6c";
     fsType = "ext4";
     options = [
-        "users"
-        "nofail"
+      "users"
+      "nofail"
     ];
   };
 
@@ -151,10 +151,12 @@
     inputs.nixCats.packages.${system}.nixCats
     hwinfo
     dmidecode
+    #Gaming
+    mangohud
   ];
 
   fonts.packages = with pkgs; [
-  nerd-fonts.jetbrains-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   nix.settings.experimental-features = [
@@ -238,7 +240,6 @@
   # ENV variables
   commonVariables.enable = true;
 
-
   # NVF
   # Disabld for testing NixCats
   #nvf.enable = true;
@@ -254,9 +255,13 @@
   };
 
   # GPU Drivers
-  services.xserver.videoDrivers = ["nvidia"]; #worls for x and wayland
+  services.xserver.videoDrivers = [ "nvidia" ]; # worls for x and wayland
   #services.xserver.videoDrivers = ["amdgpu"];
 
   hardware.nvidia.modesetting.enable = true; # helps some wayland compositors work porperly
   hardware.nvidia.open = true; # enables the nvidia open source kernal modules;
+
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
 }
