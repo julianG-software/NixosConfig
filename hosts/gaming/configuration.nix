@@ -258,4 +258,5 @@
   #services.xserver.videoDrivers = ["amdgpu"];
 
   hardware.nvidia.modesetting.enable = true; # helps some wayland compositors work porperly
+  hardware.nvidia.open = true; # enables the nvidia open source kernal modules;
 }
