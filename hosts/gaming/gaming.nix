@@ -19,7 +19,12 @@
   config = lib.mkIf config.gaming.enable {
     environment.systemPackages = with pkgs; [
       mangohud
+      protonup
     ];
+
+    environment.sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+    };
 
     #enable opengl
     hardware.graphics = {
