@@ -31,6 +31,9 @@
     environment.systemPackages = with pkgs; [
       mangohud
       protonup
+      lutris
+      heroic
+      bottles
     ];
 
     environment.sessionVariables = {
