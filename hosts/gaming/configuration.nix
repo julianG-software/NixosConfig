@@ -170,6 +170,10 @@
     inputs.nixCats.packages.${system}.nixCats
     hwinfo
     dmidecode
+
+    #thumbnailers
+    ffmpeg-headless
+    ffmpegthumbnailer
   ];
 
   fonts.packages = with pkgs; [
