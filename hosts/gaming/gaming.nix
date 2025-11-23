@@ -33,7 +33,6 @@
       protonup
       lutris
       heroic
-      bottles
     ];
 
     environment.sessionVariables = {
