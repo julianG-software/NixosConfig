@@ -113,6 +113,10 @@
   git.enable = true;
   git.userName = "Julian Gerke";
   git.userEmail = "49532943+julianG-software@users.noreply.github.com";
+
+  programs.gh = {
+    enable = true;
+  };
   
   # MPV
   mpv.enable = true;
