@@ -35,10 +35,6 @@
   fileSystems."/home/ulianj/.mnt/external" = {
     device = "/dev/disk/by-uuid/c1c8c743-4e6f-41d5-9116-dc8dae93fb6c";
     fsType = "ext4";
-    options = [
-      "users"
-      "nofail"
-    ];
   };
 
   networking.hostName = "nixos"; # Define your hostname.
