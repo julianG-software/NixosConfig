@@ -140,6 +140,7 @@
   ];
 
   services.flatpak.update.auto.enable = true;
+  services.flatpak.update.onActivation = true;
   services.flatpak.uninstallUnmanaged = true; # uninstall not declared flatpak's automaticly
 
   # Add here the flatpaks you want to install
