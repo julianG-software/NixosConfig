@@ -12,8 +12,19 @@
   ];
 
   options = {
-
-    gaming.enable = lib.mkEnableOption "enables Gaming module";
+    gaming = {
+      enable = lib.mkEnableOption "enables Gaming module";
+      GPU_Drivers = lib.mkOption {
+        type = lib.types.listOf (
+          lib.types.enum [
+            "nvidia"
+            "amdgpu"
+          ]
+        );
+        default = [ "nvidia" ];
+        description = "sets the gpu drivers to be used";
+      };
+    };
   };
 
   config = lib.mkIf config.gaming.enable {
@@ -33,7 +44,7 @@
     };
 
     # GPU Drivers
-    services.xserver.videoDrivers = [ "nvidia" ]; # worls for x and wayland
+    services.xserver.videoDrivers = config.gaming.GPU_Drivers; # worls for x and wayland
     #services.xserver.videoDrivers = ["amdgpu"];
 
     hardware.nvidia.modesetting.enable = true; # helps some wayland compositors work porperly

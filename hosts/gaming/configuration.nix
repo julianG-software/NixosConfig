@@ -238,5 +238,12 @@
   # NVF
   # Disabld for testing NixCats
   #nvf.enable = true;
+
+  #------------------------------------------------------------#
+  #                         Gaming                             #
+  #------------------------------------------------------------#
+  
+  # Enable the Gaming Module
   gaming.enable = true;
+  gaming.GPU_Drivers = ["nvidia"]; #nvidia or amdgpu
 }
