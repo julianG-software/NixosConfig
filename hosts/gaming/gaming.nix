@@ -45,13 +45,15 @@
 
     # GPU Drivers
     services.xserver.videoDrivers = config.gaming.GPU_Drivers; # worls for x and wayland
-    #services.xserver.videoDrivers = ["amdgpu"];
 
     hardware.nvidia.modesetting.enable = true; # helps some wayland compositors work porperly
     hardware.nvidia.open = true; # enables the nvidia open source kernal modules;
 
+    #Game Wrappers
+    #add to steam lauch options to use 
     programs.steam.enable = true;
-    programs.steam.gamescopeSession.enable = true;
-    programs.gamemode.enable = true;
+    programs.steam.gamescopeSession.enable = true; # gamescope %command%
+    programs.gamemode.enable = true; # gamemoderun %command%
+    # mangohud %command%
   };
 }
