@@ -16,6 +16,8 @@
         #inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
   };
 
   outputs =
@@ -24,6 +26,7 @@
       nixpkgs,
       nixCats,
       #nvf,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -35,6 +38,7 @@
           ./configuration.nix
           inputs.home-manager.nixosModules.default
           #nvf.nixosModules.default
+          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
     };
