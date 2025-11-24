@@ -29,10 +29,11 @@
 
   config = lib.mkIf config.gaming.enable {
     environment.systemPackages = with pkgs; [
-      mangohud
-      protonup
-      lutris
-      heroic
+      mangohud # pervormance overlay
+      protonup # proton GE installer
+      lutris # games laucher platform
+      heroic # epic,gog,amazon games launcer
+      gale # thunderstore client
     ];
     
   services.flatpak.packages = [
