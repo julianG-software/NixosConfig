@@ -171,6 +171,9 @@
     hwinfo
     dmidecode
 
+    mullvad-vpn
+    qbittorrent-enhanced
+
     #thumbnailers
     ffmpeg-headless
     ffmpegthumbnailer
