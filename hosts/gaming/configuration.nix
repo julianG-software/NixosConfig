@@ -179,6 +179,11 @@
     ffmpegthumbnailer
   ];
 
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
