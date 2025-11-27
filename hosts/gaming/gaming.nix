@@ -5,8 +5,11 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
-}:
+}:let
+  nixpkgs-master = inputs.nixpkgs-master.legacyPackages.${pkgs.system};
+in 
 {
   imports = [
   ];
@@ -33,7 +36,7 @@
       protonup # proton GE installer
       lutris # games laucher platform
       heroic # epic,gog,amazon games launcer
-      gale # thunderstore client
+      nixpkgs-master.gale # thunderstore client
     ];
     
   services.flatpak.packages = [

@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-master.url = "github:nixos/nixpkgs";
 
     # nvf.url = "github:notashelf/nvf";
 
