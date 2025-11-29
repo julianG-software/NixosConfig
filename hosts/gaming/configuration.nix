@@ -204,6 +204,7 @@
     kdePackages.kolourpaint # Easy-to-use paint program
     kdePackages.ksystemlog # KDE SystemLog Application
     kdePackages.sddm-kcm # Configuration module for SDDM
+    kdePackages.powerdevil # KDE power management
     kdiff3 # Compares and merges 2 or 3 files or directories
     # Non-KDE graphical packages
     wayland-utils # Wayland utilities
