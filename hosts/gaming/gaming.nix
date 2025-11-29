@@ -37,6 +37,7 @@ in
       lutris # games laucher platform
       heroic # epic,gog,amazon games launcer
       nixpkgs-master.gale # thunderstore client
+      kdePackages.wallpaper-engine-plugin
     ];
     
   services.flatpak.packages = [
