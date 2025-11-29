@@ -187,6 +187,7 @@
     inputs.nixCats.packages.${system}.nixCats
     hwinfo
     dmidecode
+    flameshot
 
     mullvad-vpn
     qbittorrent-enhanced
