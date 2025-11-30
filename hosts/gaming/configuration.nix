@@ -174,6 +174,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  hardware.bluetooth.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -206,6 +208,7 @@
     kdePackages.ksystemlog # KDE SystemLog Application
     kdePackages.sddm-kcm # Configuration module for SDDM
     kdePackages.powerdevil # KDE power management
+    kdePackages.bluedevil # Bluetooth management
     kdiff3 # Compares and merges 2 or 3 files or directories
     # Non-KDE graphical packages
     wayland-utils # Wayland utilities
