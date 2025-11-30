@@ -44,7 +44,7 @@ in
     #{ appId = "com.brave.Browser"; origin = "flathub"; }
     #"com.obsproject.Studio"
     #"im.riot.Riot"
-    "com.usebottles.bottles"
+    "com.usebottles.bottles" # had to add --env=WINE_START_DELAY=2 override to get sandboxed games to work. other override i tried before --socket=wayland, --filesystem=xdg-data/Steam.
   ];
 
     environment.sessionVariables = {
