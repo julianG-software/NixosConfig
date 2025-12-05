@@ -16,7 +16,8 @@
     environment.variables = {
       # EDITOR = "vim";
       EDITOR = "nixCats";
-      WEBKIT_DISABLE_COMPOSITING_MODE=1;
+      WEBKIT_DISABLE_COMPOSITING_MODE=1; #Needed to get certain Electron Apps to work under wayland
+      QT_QPA_PLATFORM="xcb"; # Needed to Get Flameshot working on wayland multi-monitor setup
     };
   };
 }
