@@ -84,6 +84,8 @@
 
   services.displayManager.sddm.wayland.enable = true;
 
+  programs.kdeconnect.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "de";
