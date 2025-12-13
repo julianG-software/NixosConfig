@@ -171,6 +171,11 @@
     "com.discordapp.Discord"
   ];
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 
