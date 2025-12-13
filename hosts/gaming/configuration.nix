@@ -169,6 +169,7 @@
     #"com.obsproject.Studio"
     #"im.riot.Riot"
     "com.discordapp.Discord"
+    "com.github.tchx84.Flatseal"
   ];
 
   programs.appimage = {
