@@ -220,6 +220,7 @@
     kdePackages.sddm-kcm # Configuration module for SDDM
     kdePackages.powerdevil # KDE power management
     kdePackages.bluedevil # Bluetooth management
+    kdePackages.xwaylandvideobridge # Screen Share
     kdiff3 # Compares and merges 2 or 3 files or directories
     # Non-KDE graphical packages
     wayland-utils # Wayland utilities
