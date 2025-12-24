@@ -170,6 +170,8 @@
     #"im.riot.Riot"
     "com.discordapp.Discord"
     "com.github.tchx84.Flatseal"
+    "org.jdownloader.JDownloader"
+    
   ];
 
   programs.appimage = {
